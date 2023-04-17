@@ -14,8 +14,7 @@ function getValue(com, player) {
     if (player == 'scissors') return (com == 'rock') ? 'COM WIN' : 'PLAYER 1 WIN';
 }
 
-
-
+//PLAYER 1 - ROCK//
 const playerRock = document.getElementById('rock-player');
 playerRock.addEventListener('click', function() {
     const playerPaper = document.getElementById('paper-player');
@@ -29,9 +28,9 @@ playerRock.addEventListener('click', function() {
     const playerChoose = playerRock.className;
     const value = getValue(comChoose, playerChoose);
 
-    console.log('player: ' + playerChoose);
-    console.log('com: ' + comChoose);
-    console.log('value: ' + value);
+    // console.log('player: ' + playerChoose);
+    // console.log('com: ' + comChoose);
+    // console.log('value: ' + value);
 
     document.querySelector(`.${playerChoose}`).classList.add('active');
     document.querySelector(`.${comChoose}-com`).classList.add('active');
@@ -43,12 +42,9 @@ playerRock.addEventListener('click', function() {
     if (value === 'DRAW') return
     info.style.backgroundColor = 'rgba(76, 150, 84, 1)'
 
-
-    const versus = document.querySelector('.vs')
-
-
 });
 
+//PLAYER 1 - PAPER//
 const playerPaper = document.getElementById('paper-player');
 playerPaper.addEventListener('click', function() {
 
@@ -63,9 +59,9 @@ playerPaper.addEventListener('click', function() {
     const playerChoose = playerPaper.className;
     const value = getValue(comChoose, playerChoose);
 
-    console.log('player: ' + playerChoose);
-    console.log('com: ' + comChoose);
-    console.log('value: ' + value);
+    // console.log('player: ' + playerChoose);
+    // console.log('com: ' + comChoose);
+    // console.log('value: ' + value);
 
     document.querySelector(`.${playerChoose}`).classList.add('active');
     document.querySelector(`.${comChoose}-com`).classList.add('active');
@@ -77,9 +73,11 @@ playerPaper.addEventListener('click', function() {
     if (value === 'DRAW') return
     info.style.backgroundColor = 'rgba(76, 150, 84, 1)'
 
-    const versus = document.querySelector('.vs')
+
 });
 
+
+//PLAYER 1 - SCISSORS//
 const playerScissors = document.getElementById('scissors-player');
 playerScissors.addEventListener('click', function() {
 
@@ -94,9 +92,9 @@ playerScissors.addEventListener('click', function() {
     const playerChoose = playerScissors.className;
     const value = getValue(comChoose, playerChoose);
 
-    console.log('player: ' + playerChoose);
-    console.log('com: ' + comChoose);
-    console.log('value: ' + value);
+    // console.log('player: ' + playerChoose);
+    // console.log('com: ' + comChoose);
+    // console.log('value: ' + value);
 
     document.querySelector(`.${playerChoose}`).classList.add('active');
     document.querySelector(`.${comChoose}-com`).classList.add('active');
@@ -108,5 +106,4 @@ playerScissors.addEventListener('click', function() {
     if (value === 'DRAW') return
     info.style.backgroundColor = 'rgba(76, 150, 84, 1)'
 
-    const versus = document.querySelector('.vs')
 });
