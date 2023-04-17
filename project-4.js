@@ -1,3 +1,5 @@
+//javascript//
+
 function getComChoose() {
     const com = Math.random();
     if (com < 0.34) return 'rock';
