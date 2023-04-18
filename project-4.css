@@ -114,6 +114,10 @@
     background-color: rgba(196, 196, 196, 1);
 }
 
+button.active {
+    background-color: rgba(196, 196, 196, 1);
+}
+
 .com .rock-com {
     position: absolute;
     top: 190px;

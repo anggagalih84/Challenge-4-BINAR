@@ -14,27 +14,25 @@ function getValue(com, player) {
     if (player == 'scissors') return (com == 'rock') ? 'COM WIN' : 'PLAYER 1 WIN';
 }
 
+
 //PLAYER 1 - ROCK//
 const playerRock = document.getElementById('rock-player');
 playerRock.addEventListener('click', function() {
-    const playerPaper = document.getElementById('paper-player');
-    const playerScissors = document.getElementById('scissors-player');
+
+    //disabled
+    playerRock.disabled = true;
     playerPaper.disabled = true;
     playerScissors.disabled = true;
-    // playerPaper.classList.add('disabled');
-    // playerScissors.classList.add('disabled');
 
+    //value
     const comChoose = getComChoose();
     const playerChoose = playerRock.className;
     const value = getValue(comChoose, playerChoose);
 
-    // console.log('player: ' + playerChoose);
-    // console.log('com: ' + comChoose);
-    // console.log('value: ' + value);
-
-    document.querySelector(`.${playerChoose}`).classList.add('active');
+    //com choose value
     document.querySelector(`.${comChoose}-com`).classList.add('active');
 
+    //background value
     const info = document.querySelector('.info')
     info.innerHTML = value;
     if (value === 'PLAYER 1 WIN ,  COM WIN') return
@@ -48,24 +46,20 @@ playerRock.addEventListener('click', function() {
 const playerPaper = document.getElementById('paper-player');
 playerPaper.addEventListener('click', function() {
 
-    const playerRock = document.getElementById('rock-player');
-    const playerScissors = document.getElementById('scissors-player');
+    //disabled
     playerRock.disabled = true;
+    playerPaper.disabled = true;
     playerScissors.disabled = true;
-    // playerRock.classList.add('disabled');
-    // playerScissors.classList.add('disabled');
 
+    //value
     const comChoose = getComChoose();
     const playerChoose = playerPaper.className;
     const value = getValue(comChoose, playerChoose);
 
-    // console.log('player: ' + playerChoose);
-    // console.log('com: ' + comChoose);
-    // console.log('value: ' + value);
-
-    document.querySelector(`.${playerChoose}`).classList.add('active');
+    //com choose
     document.querySelector(`.${comChoose}-com`).classList.add('active');
 
+    //background value
     const info = document.querySelector('.info')
     info.innerHTML = value;
     if (value === 'PLAYER 1 WIN ,  COM WIN') return
@@ -81,24 +75,20 @@ playerPaper.addEventListener('click', function() {
 const playerScissors = document.getElementById('scissors-player');
 playerScissors.addEventListener('click', function() {
 
-    const playerRock = document.getElementById('rock-player');
-    const playerPaper = document.getElementById('paper-player');
+    //disabled
     playerRock.disabled = true;
     playerPaper.disabled = true;
-    // playerRock.classList.add('disabled');
-    // playerPaper.classList.add('disabled');
+    playerScissors.disabled = true;
 
+    //value
     const comChoose = getComChoose();
     const playerChoose = playerScissors.className;
     const value = getValue(comChoose, playerChoose);
 
-    // console.log('player: ' + playerChoose);
-    // console.log('com: ' + comChoose);
-    // console.log('value: ' + value);
-
-    document.querySelector(`.${playerChoose}`).classList.add('active');
+    //com choose
     document.querySelector(`.${comChoose}-com`).classList.add('active');
 
+    //background value
     const info = document.querySelector('.info')
     info.innerHTML = value;
     if (value === 'PLAYER 1 WIN ,  COM WIN') return
@@ -107,12 +97,3 @@ playerScissors.addEventListener('click', function() {
     info.style.backgroundColor = 'rgba(76, 150, 84, 1)'
 
 });
-
-// const value = document.getElementById('click', function() {
-//     const info = document.querySelector('.info')
-//     info.innerHTML = value;
-//     if (value === 'PLAYER 1 WIN ,  COM WIN') return
-//     info.style.backgroundColor = 'rgba(3, 91, 12, 1)'
-//     if (value === 'DRAW') return
-//     info.style.backgroundColor = 'rgba(76, 150, 84, 1)'
-// })
