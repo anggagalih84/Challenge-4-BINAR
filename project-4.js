@@ -1,3 +1,5 @@
+// Semakin lama, semakin sulit ya bund.:') ' bagi awam seperti saya, mempelajari hal baru web programing di bootcamp ini, menjadikan suatu tantangan baru. kuncinya paham, sabar ngadepin stress nya, karena code2 yang kadang gak jalan. sampai lihat bolak balik kelas onlinenya. bahkan harus  mencari refrensi lain juga. tapi sejauh ini, kendala di awal hanya saat mengimplementasikan hasil dari console ke layar web. setelah dikasi masukan sama mas ayat, Puji Tuhan setelah itu lancar. trimakasih mas, mungkin masih ada beberapa yg kurang sempurna. tapi saya sudah lemes mass ngerjainnya. skali lagi trimakasih mas ayat, tutor dan batuannya. salam -Galih  //
+
 //javascript//
 
 function getComChoose() {
